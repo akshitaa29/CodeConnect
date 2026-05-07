@@ -155,7 +155,7 @@ npm run dev
 🔑 Demo Login Credentials
 👤 Test User
 
-Email: btbtc194_ananya@banasthali.in
+Email: btbtc23194_ananya@banasthali.in
 
 Password: 123456
 
