@@ -1,0 +1,55 @@
+.group-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 22px;
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.group-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(79,124,255,0.35);
+}
+
+.group-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.group-name {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.group-members {
+      width: 260px;
+    padding: 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    padding-left: 0px;
+    font-size: 17px;
+}
+
+.group-avatars {
+  display: flex;
+  gap: 6px;
+  margin: 12px 0;
+}
+
+.group-avatars span {
+  width: 32px;
+  height: 32px;
+  background: #4f7cff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.group-activity {
+  font-size: 12px;
+  opacity: 0.6;
+}

@@ -1,0 +1,72 @@
+.groups-page {
+  min-height: 120vh;   /* 🔥 increase page height */
+  padding-bottom: 120px; /* space at bottom */
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px;
+  color: #ffffff;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(59, 130, 246, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(139, 92, 246, 0.25),
+      transparent 45%
+    ),
+    linear-gradient(
+      180deg,
+      #0b0d10 0%,
+      #05060a 100%
+    );
+   border-radius: 20px;
+}
+.create-group-btn {
+  padding: 8px 14px;
+  background: #3b82f6;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.groups-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.create-group-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: #4f7cff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.groups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.empty-state {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.primary-btn {
+  margin-top: 16px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: none;
+  background: #4f7cff;
+  color: white;
+  cursor: pointer;
+}

@@ -1,0 +1,137 @@
+/* ===============================
+   COMMON HEADER STYLES
+   =============================== */
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Brand (logo + text) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.brand img {
+  width: 42px;
+  height: 42px;
+}
+
+.brand span {
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+/* Right side */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===============================
+   PUBLIC HEADER
+   =============================== */
+
+.public-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2px 0px;
+}
+
+/* ===============================
+   DASHBOARD HEADER
+   =============================== */
+
+.dashboard-header {
+  height: 64px;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* ===============================
+   SIDEBAR TOGGLE (Dashboard only)
+   =============================== */
+
+.sidebar-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.sidebar-toggle:hover {
+  opacity: 0.8;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+.login-btn,
+.dashboard-btn {
+  padding: 10px 22px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+}
+
+/* ===============================
+   PROFILE / AVATAR
+   =============================== */
+
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+}
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  background: rgba(30, 30, 45, 0.95);
+  backdrop-filter: blur(15px);
+  border-radius: 12px;
+  padding: 10px;
+  width: 160px;
+  z-index: 9999;
+}
+
+.profile-menu p {
+  padding: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.profile-menu p:hover {
+  background: rgba(255,255,255,0.08);
+  border-radius: 8px;
+}
+
+.profile-menu .logout {
+  color: #ff5f5f;
+}

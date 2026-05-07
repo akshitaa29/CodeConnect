@@ -1,0 +1,193 @@
+/* ---------------- LAYOUT ---------------- */
+
+.group-chat-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  width: 100%;
+  color: #e5e7eb;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.group-chat-header {
+  flex-shrink: 0;
+  padding: 14px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: #020617;
+  z-index: 5;
+}
+
+/* ---------------- MESSAGES ---------------- */
+
+.group-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: visible;   /* ✅ IMPORTANT FIX */
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  min-height: 0;
+  position: relative;   /* ✅ IMPORTANT */
+
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* ---------------- INPUT ---------------- */
+
+.group-chat-input {
+  flex-shrink: 0;
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+
+  border-top: 1px solid rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.03);
+  z-index: 5;
+}
+
+.group-chat-input input {
+  flex: 1;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 12px;
+  padding: 12px;
+  color: white;
+}
+
+.group-chat-input input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.6);
+}
+
+.group-chat-input button {
+  background: linear-gradient(135deg,#3b82f6,#6366f1);
+  border: none;
+  border-radius: 12px;
+  padding: 0 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.group-chat-input button:hover {
+  transform: translateY(-1px);
+}
+
+/* ---------------- BUBBLES ---------------- */
+
+.group-bubble {
+  max-width: 60%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  position: relative;
+  /* z-index: 1;  */
+}
+
+.group-bubble.me {
+  background: linear-gradient(135deg,#3b82f6,#6366f1);
+  align-self: flex-end;
+}
+
+.group-bubble.them {
+  background: rgba(255,255,255,0.08);
+  align-self: flex-start;
+}
+
+/* ---------------- TEXT ---------------- */
+
+.sender-name {
+  font-size: 12px;
+  color: #93c5fd;
+}
+
+.message-time {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* ---------------- MENU ---------------- */
+
+.msg-menu1 {
+  position: absolute;
+  bottom: 5px;
+  right: 1px;   /* ✅ moved inside bubble */
+  z-index: 10;
+}
+
+.msg-arrow1 {
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: #cbd5f5;
+}
+
+.msg-arrow1:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* ---------------- DROPDOWN ---------------- */
+
+.msg-dropdown1 {
+  position: absolute;
+
+  /* bottom: 32px;  ✅ ABOVE message */
+  right: 0;
+
+  background: #0f172a;
+  border-radius: 10px;
+  padding: 6px 0;
+  min-width: 120px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+
+  z-index: 9999;   /* ✅ MOST IMPORTANT */
+
+  opacity: 0;
+  transform: translateY(5px);
+  pointer-events: none;
+
+  transition: 0.2s ease;
+}
+
+.msg-menu1.active .msg-dropdown1 {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.msg-dropdown1 div {
+  padding: 8px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #e2e8f0;
+}
+
+.msg-dropdown1 div:hover {
+  background: rgba(59,130,246,0.15);
+  color: #3b82f6;
+}
+
+/* ---------------- OPTIONAL (NICE UX) ---------------- */
+
+/* show arrow only on hover */
+.msg-arrow1 {
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.group-bubble:hover .msg-arrow1 {
+  opacity: 1;
+}

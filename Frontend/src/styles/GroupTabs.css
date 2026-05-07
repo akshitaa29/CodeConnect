@@ -1,0 +1,17 @@
+.group-tabs {
+  display: flex;
+  gap: 16px;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.group-tabs a {
+  text-decoration: none;
+  color: #9ca3af;
+  padding-bottom: 6px;
+}
+
+.group-tabs a.active {
+  color: #ffffff;
+  border-bottom: 2px solid #6366f1;
+}

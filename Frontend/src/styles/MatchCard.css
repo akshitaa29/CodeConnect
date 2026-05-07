@@ -1,0 +1,171 @@
+/* ================= MAIN CARD ================= */
+
+.match-card {
+  width: 320px;
+  height: 450px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+
+  padding: 24px;
+  text-align: center;
+  position: absolute;
+
+  /* 🔥 FAST & SMOOTH */
+  transition:
+    transform 0.18s ease-out,
+    opacity 0.18s ease-out,
+    box-shadow 0.2s ease-out;
+
+  color: #e5e7eb;
+  margin-bottom: 80px;
+
+  will-change: transform, opacity;
+  transform: translateZ(0); /* GPU boost */
+
+  top: 20px;
+}
+
+/* ================= ACTIVE CARD ================= */
+
+.match-card.active {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 3;
+
+  box-shadow: 0 25px 60px rgba(99, 102, 241, 0.35);
+  cursor: pointer;
+}
+
+/* Hover only center */
+.match-card.active:hover {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 0 1px rgba(99,102,241,0.4),
+    0 35px 80px rgba(99,102,241,0.45);
+}
+
+/* ================= SIDE CARDS ================= */
+
+.match-card.prev,
+.match-card.next {
+  opacity: 0.2;
+  z-index: 2;
+  filter: blur(1px);
+}
+
+/* LEFT */
+.match-card.prev {
+  transform: translateX(-160px) scale(0.92);
+  opacity: 0.35;
+}
+
+/* RIGHT */
+.match-card.next {
+  transform: translateX(160px) scale(0.92);
+  opacity: 0.6;
+}
+
+/* ================= SWIPE ANIMATION ================= */
+
+/* 👉 FAST EXIT */
+.match-card.right {
+  transform: translateX(600px) rotate(10deg);
+  opacity: 0;
+}
+
+.match-card.left {
+  transform: translateX(-600px) rotate(-10deg);
+  opacity: 0;
+}
+
+/* ================= AVATAR ================= */
+
+.avatar-wrapper {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 16px;
+
+  border-radius: 50%;
+  border: 3px solid #6366f1;
+  overflow: hidden;
+}
+
+.avatar-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= TEXT ================= */
+
+.user-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.user-meta {
+  font-size: 14px;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+/* ================= SKILLS ================= */
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills span {
+  background: rgba(99, 102, 241, 0.18);
+  color: #c7d2fe;
+
+  padding: 6px 12px;
+  border-radius: 14px;
+  font-size: 12px;
+}
+
+/* ================= BUTTONS ================= */
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 22px;
+}
+
+.action-btn {
+  width: 56px;
+  height: 56px;
+
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+  font-size: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  color: #e5e7eb;
+
+  transition: all 0.2s ease;
+}
+
+/* LIKE */
+.action-btn.like:hover {
+  background: #6366f1;
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.7);
+  transform: scale(1.1);
+}
+
+/* DISLIKE */
+.action-btn.nope:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}

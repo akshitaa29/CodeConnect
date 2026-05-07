@@ -1,0 +1,38 @@
+.dashboard-wrapper {
+  display: flex;
+  height: calc(100vh - 64px); /* header height */
+  overflow: hidden;
+ 
+  animation: dashboardEnter 0.4s ease;
+}
+
+
+/* MAIN CONTENT */
+.dashboard-content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+  padding-left: 24px;
+  animation: dashboardEnter 0.45s ease;
+}
+
+/* Sidebar open */
+.dashboard-content.with-sidebar {
+  margin-left: 260px;
+}
+
+/* Sidebar closed */
+.dashboard-content.full {
+  margin-left: 0;
+}
+/* ENTRY ANIMATION */
+@keyframes dashboardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

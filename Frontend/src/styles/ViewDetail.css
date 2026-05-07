@@ -1,0 +1,252 @@
+.view-wrapper {
+  height: 100%;
+  padding: 20px;
+  color: #e5e7eb;
+}
+
+.view-container {
+  height: 100%;
+  backdrop-filter: blur(14px);
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow-y: auto;
+}
+
+/* 🔙 Back Button */
+.back-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(59, 130, 246, 0.35);
+  transform: translateX(-3px);
+}
+
+/* 🖼 Banner */
+.project-banner img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+/* 📌 Title */
+.project-title {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* 📝 Description */
+.project-description {
+  opacity: 0.7;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Sections */
+.project-section {
+  margin-bottom: 26px;
+}
+
+.project-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+/* 🔗 Links */
+.project-section a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.project-section a:hover {
+  text-decoration: underline;
+}
+
+/* 👥 Members Grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* 🧊 Member Card */
+.member-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 16px;
+  border-radius: 14px;
+  transition: 0.25s;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 24px rgba(59, 130, 246, 0.35);
+}
+
+.member-name {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.linkedin-link {
+  font-size: 13px;
+  opacity: 0.8;
+}
+.view-details-page {
+  padding: 30px 40px;
+  color: white;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Back Button */
+.back-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cfd8ff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.25s ease;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: rgba(79, 124, 255, 0.15);
+  border-color: rgba(79, 124, 255, 0.35);
+  box-shadow: 0 0 10px rgba(79, 124, 255, 0.35);
+}
+
+/* Banner */
+.project-banner {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Title */
+.project-title {
+  font-size: 28px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Description */
+.project-description {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+  margin-bottom: 26px;
+  max-width: 850px;
+  line-height: 1.6;
+}
+
+/* Section Blocks */
+.details-section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 18px 22px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* Labels */
+.section-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 6px;
+}
+
+/* Repo Link */
+.repo-link {
+  color: #7ea2ff;
+  text-decoration: none;
+  font-size: 15px;
+  word-break: break-all;
+}
+
+.repo-link:hover {
+  text-decoration: underline;
+}
+
+/* Members Grid */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+
+/* Member Card */
+.member-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
+  border-radius: 14px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.member-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 18px rgba(79, 124, 255, 0.35);
+  border-color: rgba(79, 124, 255, 0.35);
+}
+
+/* Member Name */
+.member-name {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* LinkedIn Button */
+.linkedin-btn {
+  background: rgba(79, 124, 255, 0.12);
+  border: 1px solid rgba(79, 124, 255, 0.25);
+  color: #7ea2ff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.linkedin-btn:hover {
+  background: rgba(79, 124, 255, 0.22);
+  box-shadow: 0 0 10px rgba(79, 124, 255, 0.35);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

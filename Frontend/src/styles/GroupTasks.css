@@ -1,0 +1,225 @@
+.group-tasks-container {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ---------------- PROJECT PROGRESS ---------------- */
+
+.project-progress-card {
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+.progress-bar {
+  position: relative;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+.progress-marker {
+  position: absolute;
+  top: -4px;
+  width: 2px;
+  height: 18px;
+  background: #60a5fa;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  box-shadow:
+    0 0 8px rgba(96, 165, 250, 0.8),
+    0 0 16px rgba(96, 165, 250, 0.4);
+  transition: left 0.4s ease;
+}
+
+/* ---------------- FLASHCARDS GRID ---------------- */
+
+.flashcards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+
+  overflow-y: auto;
+  padding: 10px 12px 20px;
+}
+
+/* ---------------- TASK CARD ---------------- */
+
+.task-card {
+  width: 100%;
+  /* min-height: 220px; */
+
+  padding: 16px;
+  border-radius: 16px;
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 14px 30px rgba(99, 102, 241, 0.3);
+}
+
+/* COLORS */
+
+.task-card.blue {
+  background: linear-gradient(145deg, #1e3a8a, #020617);
+}
+
+.task-card.purple {
+  background: linear-gradient(145deg, #6d28d9, #020617);
+}
+
+.task-card.green {
+  background: linear-gradient(145deg, #065f46, #020617);
+}
+
+.task-card.orange {
+  background: linear-gradient(145deg, #9a3412, #020617);
+}
+
+/* ---------------- TEXT ---------------- */
+
+.task-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.task-user {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.task-deadline {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* ---------------- STATUS ---------------- */
+
+.task-status {
+  align-self: flex-start;
+  font-size: 11px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.task-status.pending {
+  background: rgba(234, 179, 8, 0.2);
+  color: #facc15;
+}
+
+.task-status.completed {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.task-status.in-progress {
+  background: rgba(59, 130, 246, 0.18);
+  color: #93c5fd;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.task-update-btn {
+  margin-top: auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.task-reminder-btn {
+  margin-top: 6px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ---------------- LOCK ---------------- */
+
+.task-locked {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* ---------------- DEADLINE COLORS ---------------- */
+
+.task-deadline.overdue {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.task-deadline.urgent {
+  color: #f59e0b;
+  font-weight: 500;
+}
+
+.task-deadline.normal {
+  color: #22c55e;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ✅ BUTTON CONTAINER */
+.task-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
